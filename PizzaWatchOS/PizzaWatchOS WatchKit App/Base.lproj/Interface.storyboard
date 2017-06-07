@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--PizzaMenuContext-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="PizzaMenuContext" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PizzaWatchOS_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="uv0-we-Tvs">
+                            <items>
+                                <label alignment="center" text="Pizza Menu" id="aEI-au-CY8"/>
+                            </items>
+                        </group>
+                        <group width="134" alignment="left" id="P0r-le-i3f">
+                            <items>
+                                <imageView width="22" height="22" alignment="right" image="tamanio" id="JXf-Gb-xnL"/>
+                                <button width="100" height="1" alignment="left" title="Tamaño" id="i34-VF-R1H">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="seleccionarTamanio" destination="AgC-eL-Hgc" id="z1D-Z4-qrz"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="CB4-DN-xfk">
+                            <items>
+                                <imageView width="22" height="22" alignment="right" image="masa" id="kDF-9G-dJN"/>
+                                <button width="100" height="1" alignment="left" title="Masa" id="jzy-EE-yRx">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="seleccionarMasa" destination="AgC-eL-Hgc" id="u3b-45-Yco"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="DO4-so-vzd">
+                            <items>
+                                <imageView width="22" height="22" alignment="right" image="queso" id="TvK-Mn-HN5"/>
+                                <button width="100" height="1" alignment="left" title="Queso" id="O3x-oQ-vgh">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                    <connections>
+                                        <action selector="seleccionarQueso" destination="AgC-eL-Hgc" id="0tP-2p-kOt"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="OH4-0J-S9M">
+                            <items>
+                                <imageView width="22" height="22" alignment="right" image="ingredientes" id="NsB-hD-4ta"/>
+                                <button width="100" height="1" alignment="left" title="Ingredientes" id="PD0-GP-a0q">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="seleccionarIngredientes" destination="AgC-eL-Hgc" id="gns-WL-GOn"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="qr6-SO-Vre">
+                            <items>
+                                <imageView width="22" height="22" alignment="right" image="pago" id="fbN-k8-WuW"/>
+                                <button width="100" height="1" alignment="left" title="Pagar" id="bkx-2i-CA2">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="realizarPago" destination="AgC-eL-Hgc" id="YH0-aa-cwz"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="60" y="-62.5"/>
+        </scene>
+        <!--SeleccionTamanio-->
+        <scene sceneID="dHF-BM-0Mb">
+            <objects>
+                <controller identifier="SeleccionTamanio" id="VSB-pq-zjo" customClass="TamanioInterfaceController" customModule="PizzaWatchOS_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="g8k-gh-NTl">
+                            <items>
+                                <label alignment="center" text="Selección Tamaño" id="czJ-v7-h0Y"/>
+                            </items>
+                        </group>
+                        <table alignment="left" id="NzI-6A-Mya">
+                            <items>
+                                <tableRow identifier="TamanioRowController" id="7Xn-O1-6bG" customClass="RowController" customModule="PizzaWatchOS_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="25" alignment="left" id="gRL-2O-TbV">
+                                        <items>
+                                            <label width="100" height="1" alignment="left" id="oIK-ER-5t9">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="oIK-ER-5t9" id="NbX-SR-K4s"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tamanioTable" destination="NzI-6A-Mya" id="y1o-zT-iNw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="288" y="-63"/>
+        </scene>
+        <!--SeleccionMasa-->
+        <scene sceneID="GR8-FZ-RTL">
+            <objects>
+                <controller identifier="SeleccionMasa" id="VBQ-r5-ceY" customClass="MasaInterfaceController" customModule="PizzaWatchOS_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="950-by-jLa">
+                            <items>
+                                <label alignment="center" text="Selección Masa" id="0wW-lu-38m"/>
+                            </items>
+                        </group>
+                        <table alignment="left" id="zzO-Zd-3fv">
+                            <items>
+                                <tableRow identifier="MasaRowController" id="Wjg-dQ-gjC" customClass="RowController" customModule="PizzaWatchOS_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="25" alignment="left" id="LmG-YP-A7l">
+                                        <items>
+                                            <label width="100" height="100" alignment="left" id="Jjd-Wf-EUV">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="Jjd-Wf-EUV" id="hLM-b8-vyS"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="masaTable" destination="zzO-Zd-3fv" id="w7e-65-u0L"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="516" y="-63"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="60" y="525"/>
+        </scene>
+        <!--SeleccionQueso-->
+        <scene sceneID="CMW-8S-T8z">
+            <objects>
+                <controller identifier="SeleccionQueso" id="OLH-I2-NvC" customClass="QuesoInterfaceController" customModule="PizzaWatchOS_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="eFR-Yk-2ga">
+                            <items>
+                                <label alignment="center" text="Selección Queso" id="0OZ-rj-fb8"/>
+                            </items>
+                        </group>
+                        <table alignment="left" id="ej0-qU-E8i">
+                            <items>
+                                <tableRow identifier="QuesoRowController" id="nkH-WU-4J9" customClass="RowController" customModule="PizzaWatchOS_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="25" alignment="left" id="KAm-kw-mC6">
+                                        <items>
+                                            <label width="100" height="100" alignment="left" id="HFD-Ya-uGl">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="HFD-Ya-uGl" id="QqY-uS-51t"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="quesoTable" destination="ej0-qU-E8i" id="ZvB-wr-hWN"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="743" y="-63"/>
+        </scene>
+        <!--SeleccionIngredientes-->
+        <scene sceneID="oHr-IC-Rvj">
+            <objects>
+                <controller identifier="SeleccionIngredientes" id="2jO-Xw-fyd" customClass="IngredienteInterfaceController" customModule="PizzaWatchOS_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="3Zc-X5-Lza">
+                            <items>
+                                <label alignment="center" text="Sel. Ingredientes" id="GYc-xc-t09"/>
+                            </items>
+                        </group>
+                        <table alignment="left" id="Okn-s4-tql">
+                            <items>
+                                <tableRow identifier="IngredientesRowController" id="kJF-Xo-woo" customClass="RowController" customModule="PizzaWatchOS_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="25" alignment="left" id="JpD-pg-7n8">
+                                        <items>
+                                            <label width="100" height="100" alignment="left" id="Ekh-2P-cTe">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="Ekh-2P-cTe" id="rnM-qF-pzb"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="ingredientesTable" destination="Okn-s4-tql" id="6kc-ou-xjR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="959" y="-63"/>
+        </scene>
+        <!--RealizarPago-->
+        <scene sceneID="Gb5-fx-nOX">
+            <objects>
+                <controller identifier="RealizarPago" id="LPf-o4-Ja4" customClass="PagoInterfaceController" customModule="PizzaWatchOS_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="0i1-SI-bwz">
+                            <items>
+                                <label alignment="center" text="Realizar Pago" id="aca-rM-wrm"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="ehf-ld-j8U">
+                            <items>
+                                <label alignment="left" text="Tamaño:" id="iqd-D2-kHa">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label alignment="left" id="1OT-TM-eTW">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="A2Z-Sp-b2K">
+                            <items>
+                                <label alignment="left" text="Masa:" id="RWb-Aw-Dz6">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label alignment="left" id="S9I-3H-Iq2">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="pkN-Ae-mth">
+                            <items>
+                                <label alignment="left" text="Queso:" id="kFh-uk-W7O">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label alignment="left" id="iP3-eb-GIR">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="cFQ-5L-n4w">
+                            <items>
+                                <label alignment="left" text="Ingredientes:" id="uLC-Qm-uDd">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="JxI-gn-Kxh">
+                            <items>
+                                <label alignment="left" numberOfLines="3" id="RYj-0u-jUJ">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="d9U-dJ-Nga">
+                            <items>
+                                <button width="1" height="25" alignment="left" title="Aceptar" id="iok-6y-zlX">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="realizarAceptar" destination="LPf-o4-Ja4" id="efd-Up-ynK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="fvR-aN-ygj">
+                            <items>
+                                <button width="1" height="25" alignment="left" title="Cancelar" id="M9S-ae-c2g">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <segue destination="AgC-eL-Hgc" kind="push" id="JEi-Nq-eaP"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelIngredientes" destination="RYj-0u-jUJ" id="bZG-Oo-pXW"/>
+                        <outlet property="labelMasa" destination="S9I-3H-Iq2" id="PP0-Gd-dkI"/>
+                        <outlet property="labelQueso" destination="iP3-eb-GIR" id="orS-BK-b4y"/>
+                        <outlet property="labelTamanio" destination="1OT-TM-eTW" id="Gfz-7k-abP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="288" y="215"/>
+        </scene>
+        <!--FinalizarPedido-->
+        <scene sceneID="e5R-Ig-9XB">
+            <objects>
+                <controller identifier="FinalizarPedido" id="KkX-AX-eFj">
+                    <items>
+                        <group width="1" alignment="left" id="6jG-q1-DAk">
+                            <items>
+                                <label alignment="center" text="Pizza Menu" id="obg-Vq-Ng4"/>
+                            </items>
+                        </group>
+                        <group width="134" alignment="left" id="pd9-1t-XII">
+                            <items>
+                                <imageView width="22" height="22" alignment="right" image="nueva" id="ZDg-UK-SfX"/>
+                                <button width="100" height="1" alignment="left" title="Nueva" id="qGb-Cw-4Yk">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="seleccionarTamanio" destination="AgC-eL-Hgc" id="8eU-AE-YhM"/>
+                                        <segue destination="AgC-eL-Hgc" kind="push" id="UfA-xo-Cah"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="4KZ-o5-T5h">
+                            <items>
+                                <label alignment="center" text="Pedido realizado correctamente" numberOfLines="2" id="Gri-Q0-SAk">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="0sw-hS-2b7">
+                            <items>
+                                <label alignment="center" text="Gracias por su compra" numberOfLines="2" id="itC-dI-R8h">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="516" y="215"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="PizzaWatchOS_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="525"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JEi-Nq-eaP"/>
+    </inferredMetricsTieBreakers>
+</document>
